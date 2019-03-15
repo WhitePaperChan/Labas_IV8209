@@ -45,11 +45,10 @@ public class Laba2 {
                     elem += A[i][k] * B[j][k];
                 }
                 C.get(i).add(elem);
-                trans = C.get(i).get(j);
-                System.out.print(C.get(i).get(j) + " ");
-                System.out.print("(" + trans + ") ");
-                if (max < C.get(i).get(j)){
-                    max = C.get(i).get(j);
+                trans = elem;//C.get(i).get(j);
+                System.out.print(elem + " (" + trans + ") ");
+                if (max < elem){
+                    max = elem;
                 }
             }
             System.out.println();
