@@ -1,3 +1,7 @@
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.List;
+
 public class Laba2 {
     void error(){
         System.out.println("A x B is impossible");
@@ -12,11 +16,11 @@ public class Laba2 {
                 {2, 4, 5},
                 {3, 5, 4}};
         char B[][] = {
-                {2, 4, 3},
-                {3, 2, 4},
-                {3, 4, 5}
+                {2, 4},
+                {3, 2},
+                {3, 4}
         };
-        char C[][] = {{0, 0, 0},{0, 0, 0},{0, 0, 0}};
+        List<ArrayList<Character>> C = new ArrayList<ArrayList<Character>>();
         char sum = 0;
         for (i = 1; i < A.length; i++){
             if (A[0].length != A[i].length){
@@ -28,22 +32,24 @@ public class Laba2 {
                 error_call.error();
             }
         }
-        if (A.length != B[0].length || B.length != A[0].length){
+        if (B.length != A[0].length){
             error_call.error();
         }
         System.out.println("C:");
         for (i=0; i < A.length; i++) {
             int max = 0;
-            for (j = 0; j < B.length; j++) {
-                C[i][j] = 0;
-                for (k = 0; k < 3; k++) {
-                    C[i][j] += A[i][k] * B[j][k];
+            C.add(new ArrayList<Character>());
+            for (j = 0; j < B[0].length; j++) {
+                char elem = 0;
+                for (k = 0; k < B[0].length; k++) {
+                    elem += A[i][k] * B[j][k];
                 }
-                trans = C[i][j];
-                System.out.print(C[i][j] + " ");
+                C.get(i).add(elem);
+                trans = C.get(i).get(j);
+                System.out.print(C.get(i).get(j) + " ");
                 System.out.print("(" + trans + ") ");
-                if (max < C[i][j]){
-                    max = C[i][j];
+                if (max < C.get(i).get(j)){
+                    max = C.get(i).get(j);
                 }
             }
             System.out.println();
