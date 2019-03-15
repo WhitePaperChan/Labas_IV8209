@@ -35,7 +35,7 @@ public class Laba2 {
         if (B.length != A[0].length){
             error_call.error();
         }
-        System.out.println("C:");
+        System.out.println("C (A x B):");
         for (i=0; i < A.length; i++) {
             int max = 0;
             C.add(new ArrayList<Character>());
@@ -55,6 +55,6 @@ public class Laba2 {
             sum += max;
         }
         trans = sum;
-        System.out.println("Sum:" + sum + " (" + trans + ")");
+        System.out.println("Сума найбільших елементів у рядку:\n" + sum + " (" + trans + ")");
     }
 }
