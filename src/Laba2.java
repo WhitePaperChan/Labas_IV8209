@@ -16,8 +16,8 @@ public class Laba2 {
                 {2, 4, 5},
                 {3, 5, 4}};
         char B[][] = {
-                {2, 4},
-                {3, 2},
+                {10, 4},
+                {3, 10},
                 {3, 4}
         };
         List<ArrayList<Character>> C = new ArrayList<ArrayList<Character>>();
