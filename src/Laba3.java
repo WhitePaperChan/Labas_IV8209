@@ -27,7 +27,7 @@ public class Laba3 {
         if (scanner.hasNextInt()){
             len = scanner.nextInt();
         } else {
-            System.out.println("It's not an integer. Standart length - 5.");
+            System.out.println("It's not an integer. Standard length - 5.");
             scanner.next();
         }
         System.out.println("Replace word with length " + len + " to:");

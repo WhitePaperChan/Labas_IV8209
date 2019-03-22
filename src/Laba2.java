@@ -1,4 +1,3 @@
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,7 +36,7 @@ public class Laba2 {
         }
         System.out.println("C (A x B):");
         for (i=0; i < A.length; i++) {
-            int max = 0;
+            int max = Integer.MIN_VALUE;
             C.add(new ArrayList<Character>());
             for (j = 0; j < B[0].length; j++) {
                 char elem = 0;
