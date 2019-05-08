@@ -1,4 +1,4 @@
-public class Punct {
+public class Punct extends SentenceElems{
     static String punct_symbols = "!?.,:;";
     private String punctString;
     Punct(String punct_symb){

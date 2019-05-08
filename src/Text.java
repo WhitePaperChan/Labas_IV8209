@@ -5,16 +5,25 @@ import java.util.concurrent.SynchronousQueue;
 
 public class Text {
     private ArrayList<Sentence> sentences = new ArrayList<>();
-    private String textString;
     public Text(String text_rare){
-        textString = text_rare;
-        String [] text_split = textString.split("(?<=[.!?]) ");
+        String [] text_split = text_rare.split("(?<=[.!?]) ");
         for (String i: text_split) {
             sentences.add(new Sentence(i));
         }
     }
     public String toString(){
-        return textString;
+        StringBuilder string = new StringBuilder();
+        ArrayList<Object> wordsOrPuncts = this.getWordsOrPuncts();
+        for (Object i: wordsOrPuncts){
+            string.append(i.toString());
+            int index = wordsOrPuncts.indexOf(i);
+            if (index != wordsOrPuncts.size() - 1){
+                if (wordsOrPuncts.get(index + 1) instanceof Word){
+                    string.append(" ");
+                }
+            }
+        }
+        return string.toString();
     }
     public ArrayList<Sentence> getSentences(){
         return sentences;
@@ -46,4 +55,14 @@ public class Text {
         }
         return puncts;
     }
+
+    public void changeWord(int replaceNum, String replaceWord){
+        ArrayList<Word> word = this.getWords();
+        for (Word i: this.getWords()){
+            if (i.getLetters().length == replaceNum){
+                i.setWordString(replaceWord);
+            }
+        }
+    }
+
 }

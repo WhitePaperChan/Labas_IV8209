@@ -1,12 +1,8 @@
-import com.sun.corba.se.spi.ior.ObjectKey;
-import javafx.concurrent.WorkerStateEvent;
-
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 
 public class Sentence {
-    private ArrayList<Object> wordsOrPuncts = new ArrayList<>();
+    private ArrayList<SentenceElems> wordsOrPuncts = new ArrayList<>();
     private String sentenceString;
     public Sentence(String sentence_rare){
         sentenceString = sentence_rare;
@@ -20,12 +16,12 @@ public class Sentence {
         }
     }
     public String toString(){ return sentenceString; }
-    public ArrayList<Object> getWordsOrPuncts(){
+    public ArrayList<SentenceElems> getWordsOrPuncts(){
         return wordsOrPuncts;
     }
     public ArrayList<Word> getWords(){
         ArrayList<Word> words = new ArrayList<>();
-        for (Object i: wordsOrPuncts){
+        for (SentenceElems i: wordsOrPuncts){
             if (i instanceof Word){
                 words.add((Word) i);
             }
@@ -41,7 +37,7 @@ public class Sentence {
     }
     public ArrayList<Punct> getPuncts(){
         ArrayList<Punct> puncts = new ArrayList<>();
-        for (Object i : wordsOrPuncts){
+        for (SentenceElems i : wordsOrPuncts){
             if (i instanceof Punct){
                 puncts.add((Punct) i);
             }
