@@ -57,11 +57,8 @@ public class Text {
     }
 
     public void changeWord(int replaceNum, String replaceWord){
-        ArrayList<Word> word = this.getWords();
-        for (Word i: this.getWords()){
-            if (i.getLetters().length == replaceNum){
-                i.setWordString(replaceWord);
-            }
+        for(Sentence i: sentences){
+            i.changeWord(replaceNum, replaceWord);
         }
     }
 

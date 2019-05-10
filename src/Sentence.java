@@ -44,4 +44,12 @@ public class Sentence {
         }
         return puncts;
     }
+
+    public void changeWord(int replaceNum, String replaceWord){
+        for (Word i: this.getWords()){
+            if (i.getLetters().length == replaceNum){
+                i.setWordString(replaceWord);
+            }
+        }
+    }
 }
