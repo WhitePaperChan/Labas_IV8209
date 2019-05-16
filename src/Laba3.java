@@ -22,7 +22,7 @@ public class Laba3 {
         Laba3 s_check = new Laba3();
         int len = 5;
 
-        System.out.println("Text: " + text);
+        System.out.println("Laba5.Text: " + text);
         System.out.println("How long word have to be?");
         if (scanner.hasNextInt()){
             len = scanner.nextInt();

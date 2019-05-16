@@ -1,3 +1,5 @@
+package Laba5;
+
 public class Word extends SentenceElems{
     private Symbol [] symbols;
     private String wordString;

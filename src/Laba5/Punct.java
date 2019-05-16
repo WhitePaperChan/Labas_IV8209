@@ -1,3 +1,5 @@
+package Laba5;
+
 public class Punct extends SentenceElems{
     static String punct_symbols = "!?.,:;";
     private String punctString;

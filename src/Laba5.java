@@ -1,5 +1,4 @@
-import java.util.ArrayList;
-
+import Laba5.*;
 public class Laba5 {
     public static void main(String[] args) {
         final String replaceWord = "nya";

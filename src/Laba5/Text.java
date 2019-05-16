@@ -1,7 +1,6 @@
+package Laba5;
+
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.concurrent.SynchronousQueue;
 
 public class Text {
     private ArrayList<Sentence> sentences = new ArrayList<>();

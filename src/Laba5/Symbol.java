@@ -1,3 +1,5 @@
+package Laba5;
+
 public class Symbol {
     String symbolString;
     Symbol(String symbol){
