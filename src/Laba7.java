@@ -27,10 +27,20 @@ public class Laba7 {
         array.add(armor);
         array.add(helmet);
 
-        SetOneConnect test = new SetOneConnect();
-        test.size();
+        SetOneConnect test = new SetOneConnect(armor);
+        System.out.println("SetOneConnect (armor) creation..." +
+                "\nSize: " + test.size() +
+                "\nIs empty? " + test.isEmpty() + "\n");
+        createPrintArray(test);
 
-        System.out.println("SetOneConnect creation..." +
+        test = new SetOneConnect(array);
+        System.out.println("\nSetOneConnect (armor, armor, helmet) creation..." +
+                "\nSize: " + test.size() +
+                "\nIs empty? " + test.isEmpty() + "\n");
+        createPrintArray(test);
+
+        test = new SetOneConnect();
+        System.out.println("\nSetOneConnect (empty) creation..." +
                 "\nSize: " + test.size() +
                 "\nIs empty? " + test.isEmpty() + "\n");
 
