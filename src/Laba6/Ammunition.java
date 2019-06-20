@@ -9,9 +9,17 @@ public class Ammunition {
      * @param weight Ammunition's weight
      * @param price Ammunition's price
      */
-    public Ammunition(double weight, double price){
-        this.weight = weight;
-        this.price = price;
+    public Ammunition(double weight, double price) throws IncorrectAmmunitionWeightException{
+        if (weight <= 0){
+            throw new IncorrectAmmunitionWeightException();
+        } else {
+            this.weight = weight;
+        }
+        if (price <= 0) {
+            throw new IncorrectAmmunitionPriceException();
+        } else {
+            this.price = price;
+        }
     }
 
     /**
@@ -27,7 +35,11 @@ public class Ammunition {
      * @param weight double, weight of ammunition (kg)
      */
     public void setWeight(double weight) {
-        this.weight = weight;
+        if (weight <= 0){
+            throw new IncorrectAmmunitionWeightException();
+        } else {
+            this.weight = weight;
+        }
     }
 
     /**
@@ -43,7 +55,11 @@ public class Ammunition {
      * @param price double, price of ammunition (uah)
      */
     public void setPrice(double price) {
-        this.price = price;
+        if (price <= 0) {
+            throw new IncorrectAmmunitionPriceException();
+        } else {
+            this.price = price;
+        }
     }
 
     /**
